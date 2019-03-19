@@ -11,12 +11,18 @@ import XCTest
 
 class WatchlistTests: XCTestCase {
 
+    var sut: TableViewModel!
+    var mockAPIService: MockApiService!
+    
     override func setUp() {
         super.setUp()
+        mockAPIService = MockApiService()
     }
-
+    
     override func tearDown() {
         super.tearDown()
+        sut = nil
+        mockAPIService = nil
     }
     
     func testCreationalCellViewModel() {
@@ -46,3 +52,15 @@ class WatchlistTests: XCTestCase {
         XCTAssertNotNil(sectionViewModel)
     }
 }
+
+class MockApiService: NetworkManagerProtocol {
+    
+    var isFetchDataCalled = false
+    var completeClosure: ((Result<Array<Category>>) -> ())!
+    
+    func fetchTabs(completion: @escaping (Result<Array<Category>>) -> Void) {
+        isFetchDataCalled = true
+        completeClosure = completion
+    }
+}
+
