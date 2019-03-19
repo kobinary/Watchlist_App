@@ -78,10 +78,9 @@
 			isa = PBXGroup;
 			children = (
 				4C4EABE62240F0520080E0F4 /* AppDelegate.swift */,
-				4C4EABE82240F0520080E0F4 /* ViewController.swift */,
-				4C4EABEA2240F0520080E0F4 /* Main.storyboard */,
-				4C4EABED2240F0560080E0F4 /* Assets.xcassets */,
-				4C4EABEF2240F0560080E0F4 /* LaunchScreen.storyboard */,
+				4C4EAC082240F0C00080E0F4 /* Classes */,
+				4C4EAC062240F0880080E0F4 /* Storyboard */,
+				4C4EAC072240F0970080E0F4 /* Resources */,
 				4C4EABF22240F0560080E0F4 /* Info.plist */,
 			);
 			path = Watchlist;
@@ -94,6 +93,79 @@
 				4C4EABFD2240F0560080E0F4 /* Info.plist */,
 			);
 			path = WatchlistTests;
+			sourceTree = "<group>";
+		};
+		4C4EAC062240F0880080E0F4 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				4C4EABEA2240F0520080E0F4 /* Main.storyboard */,
+				4C4EABEF2240F0560080E0F4 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		4C4EAC072240F0970080E0F4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4C4EABED2240F0560080E0F4 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4C4EAC082240F0C00080E0F4 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				4C4EAC102240F1450080E0F4 /* TableView */,
+				4C4EAC0E2240F1330080E0F4 /* ViewModel */,
+				4C4EAC0F2240F13D0080E0F4 /* Model */,
+				4C4EAC092240F0DA0080E0F4 /* Network */,
+				4C4EAC0B2240F0FE0080E0F4 /* Helpers */,
+				4C4EAC0C2240F1090080E0F4 /* Extensions */,
+				4C4EABE82240F0520080E0F4 /* ViewController.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		4C4EAC092240F0DA0080E0F4 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		4C4EAC0B2240F0FE0080E0F4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		4C4EAC0C2240F1090080E0F4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4C4EAC0E2240F1330080E0F4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4C4EAC0F2240F13D0080E0F4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4C4EAC102240F1450080E0F4 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
