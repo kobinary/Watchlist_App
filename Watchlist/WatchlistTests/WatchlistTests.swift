@@ -76,6 +76,14 @@ class MockNetworkManager: NetworkManagerProtocol {
         isFetchDataCalled = true
         completion(Result.error(.emptyData))
     }
+    
+    func fetchSuccess() {
+        completeClosure(Result.results(completeTabCategory))
+    }
+    
+    func fetchFail() {
+        completeClosure(Result.error(.emptyData))
+    }
 
 }
 
