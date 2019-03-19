@@ -1,5 +1,5 @@
 //
-//  WatchListTableViewController.swift
+//  TableViewController.swift
 //  Watchlist
 //
 //  Created by Maria Ortega on 19/03/2019.
@@ -8,12 +8,13 @@
 
 import UIKit
 
-private let cellReuseIdentifier = "InformationTableViewCell"
+private let cellReuseIdentifier = "InfoTableViewCell"
 
-class WatchListTableViewController: UITableViewController {
+class TableViewController: UITableViewController {
 
     // MARK: - Properties
 
+    private let viewModel = TableViewModel()
     
     // MARK: - Setups
 
@@ -29,6 +30,12 @@ class WatchListTableViewController: UITableViewController {
     private func setupNavigationItems() {
         navigationItem.titleView = LogoHelper().setupLogo()
     }
+    
+    // MARK: - Fetch Data
+    
+    private func fetchData() {
+        viewModel.fetchListCategories()
+    }
 
     // MARK: - Table view data source
 
@@ -41,7 +48,7 @@ class WatchListTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath) as! InformationTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath) as! TableViewCell
 
         // Configure the cell...
 

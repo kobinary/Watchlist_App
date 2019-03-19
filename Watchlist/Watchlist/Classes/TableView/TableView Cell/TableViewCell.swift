@@ -1,5 +1,5 @@
 //
-//  InformationTableViewCell.swift
+//  TableViewCell.swift
 //  Watchlist
 //
 //  Created by Maria Ortega on 19/03/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InformationTableViewCell: UITableViewCell {
+class TableViewCell: UITableViewCell {
     
     // MARK: - Properties
     
