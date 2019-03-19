@@ -62,6 +62,26 @@ class WatchlistTests: XCTestCase {
         
         XCTAssertNotNil(sectionViewModel)
     }
+    
+    func testCreationalSectionViewModelValues() {
+        
+        let information01 = Information.init(infoID: 101, name: "First Info", modified: "2018-01-22T23:00:00.0000000Z")
+        let information02 = Information.init(infoID: 102, name: "Seconf Info", modified: "2018-01-22T23:00:00.0000000Z")
+        let information03 = Information.init(infoID: 103, name: "Third Info", modified: "2018-01-22T23:00:00.0000000Z")
+
+        let cellViewModel01 = CellViewModel.init(tab: information01)
+        let cellViewModel02 = CellViewModel.init(tab: information02)
+        let cellViewModel03 = CellViewModel.init(tab: information03)
+        
+        let listCells = [cellViewModel01, cellViewModel02, cellViewModel03]
+
+        let sectionViewModel = SectionViewModel.init(title: "First Section", listTabs: listCells)
+        
+        XCTAssertNotNil(sectionViewModel)
+        XCTAssert(cellViewModel01 === sectionViewModel.listTabs[0])
+        XCTAssert(cellViewModel02 === sectionViewModel.listTabs[1])
+        XCTAssert(cellViewModel03 === sectionViewModel.listTabs[2])
+    }
 }
 
 class MockNetworkManager: NetworkManagerProtocol {
