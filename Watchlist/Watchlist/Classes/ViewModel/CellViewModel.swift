@@ -22,6 +22,7 @@ class CellViewModel {
         self.infoID = tab.infoID
         self.name = tab.name
         self.date = getDateText(fromDate: tab.modified)
+        print(date)
     }
     
     // MARK: - Date Formatter

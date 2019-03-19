@@ -25,6 +25,7 @@
 		4C4EAC27224102C20080E0F4 /* SectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4EAC26224102C20080E0F4 /* SectionViewModel.swift */; };
 		4C4EAC29224102DD0080E0F4 /* CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4EAC28224102DD0080E0F4 /* CellViewModel.swift */; };
 		4C4EAC2B224103100080E0F4 /* String+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4EAC2A224103100080E0F4 /* String+Date.swift */; };
+		4C4EAC2F22410D370080E0F4 /* UIColor+color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4EAC2E22410D370080E0F4 /* UIColor+color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		4C4EAC26224102C20080E0F4 /* SectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionViewModel.swift; sourceTree = "<group>"; };
 		4C4EAC28224102DD0080E0F4 /* CellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModel.swift; sourceTree = "<group>"; };
 		4C4EAC2A224103100080E0F4 /* String+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Date.swift"; sourceTree = "<group>"; };
+		4C4EAC2E22410D370080E0F4 /* UIColor+color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+color.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				4C4EAC2A224103100080E0F4 /* String+Date.swift */,
+				4C4EAC2E22410D370080E0F4 /* UIColor+color.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				4C4EAC1F2240FF2F0080E0F4 /* Result.swift in Sources */,
 				4C4EAC27224102C20080E0F4 /* SectionViewModel.swift in Sources */,
 				4C4EAC29224102DD0080E0F4 /* CellViewModel.swift in Sources */,
+				4C4EAC2F22410D370080E0F4 /* UIColor+color.swift in Sources */,
 				4C4EABE72240F0520080E0F4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

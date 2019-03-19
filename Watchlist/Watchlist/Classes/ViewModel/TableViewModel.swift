@@ -19,7 +19,8 @@ class TableViewModel {
     private var manager: NetworkManager?
     weak var delegate: TableViewModelDelegate?
     var sections = [SectionViewModel]()
-    
+    private var fullContent : [SectionViewModel]!
+
     // MARK: - Init
     
     init() {
@@ -41,6 +42,8 @@ class TableViewModel {
                 break
             case .results(let data):
                 self.sections = self.parseListCategoryIntoViewModel(array: data)
+                self.saveFullContent(content: self.sections)
+                self.checkOrientation()
                 self.delegate?.reloadTable()
             }
         }
@@ -58,4 +61,38 @@ class TableViewModel {
         return sectionsVM
     }
     
+    // MARK: - Device Orientation Logic
+    
+    func saveFullContent(content:  [SectionViewModel]) {
+        self.fullContent = content
+    }
+    
+    func checkOrientation() {
+        if UIDevice.current.orientation.isLandscape {
+            didRotateToLandscape()
+        } else {
+            didRotateToPortrait()
+        }
+    }
+    
+    func didRotateToLandscape() {
+        sections = filterData()
+    }
+    
+    func didRotateToPortrait() {
+        sections = fullContent
+    }
+    
+    // MARK: - Filter Sections
+    
+    func filterData() -> [SectionViewModel] {
+        var filteredSections = [SectionViewModel]()
+        for section in sections {
+            let filteredTabs = section.listTabs.filter { $0.infoID % 2  == 0 }
+            let filteredSection = SectionViewModel.init(title: section.title, listTabs: filteredTabs)
+            filteredSections.append(filteredSection)
+        }
+        return filteredSections
+    }
+
 }
