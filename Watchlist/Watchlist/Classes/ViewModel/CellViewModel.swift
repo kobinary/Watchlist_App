@@ -12,16 +12,16 @@ class CellViewModel {
     
     // MARK: - Properties
     
-    var tabId : Int!
+    var infoID : Int!
     var name : String!
-    var modified : String!
+    var date : String!
     
     // MARK: - Init
     
     init(tab: Information) {
-        self.tabId = tab.infoID
+        self.infoID = tab.infoID
         self.name = tab.name
-        self.modified = getDateText(fromDate: tab.modified)
+        self.date = getDateText(fromDate: tab.modified)
     }
     
     // MARK: - Date Formatter

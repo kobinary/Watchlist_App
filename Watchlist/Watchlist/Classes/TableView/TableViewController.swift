@@ -20,9 +20,15 @@ class TableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.delegate = self
         setupUIView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fetchData()
+    }
+
     private func setupUIView() {
         setupNavigationItems()
     }
@@ -40,21 +46,26 @@ class TableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return viewModel.sections.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return viewModel.sections[section].listTabs.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath) as! TableViewCell
-
-        // Configure the cell...
-
+        let cellViewModel = viewModel.sections[indexPath.section].listTabs[indexPath.row]
+        cell.update(viewModel: cellViewModel)
         return cell
     }
- 
+    
+    // MARK: - Table view Header
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return viewModel.sections[section].title
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -65,6 +76,19 @@ class TableViewController: UITableViewController {
     }
     */
 
+}
+
+
+// MARK: - TableViewModel delegate
+
+extension TableViewController: TableViewModelDelegate {
+    
+    func reloadTable() {
+        DispatchQueue.main.sync {
+            self.tableView.reloadData()
+        }
+    }
+    
 }
 
 
