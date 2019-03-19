@@ -18,13 +18,50 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Q6R-oB-N1p">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="InformationTableViewCell" rowHeight="80" id="cy5-Wh-P9J" customClass="InformationTableViewCell" customModule="Watchlist" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Q6R-oB-N1p" id="DeD-lv-poz">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cy5-Wh-P9J" id="uda-Wj-mlp">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Lw-gF-HFq">
+                                            <rect key="frame" x="342.5" y="10.5" width="16.5" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="o9P-qk-NOn"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                                            <color key="textColor" red="0.12941176469999999" green="0.4431372549" blue="0.77647058820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_3:00:00_2018-01-22" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0I-wr-31a">
+                                            <rect key="frame" x="126" y="64.5" width="123.5" height="16"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="13"/>
+                                            <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_tab_name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHB-mf-sUw">
+                                            <rect key="frame" x="16" y="31.5" width="91.5" height="23"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="23" id="H4O-Cs-OwK"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="zHB-mf-sUw" firstAttribute="leading" secondItem="uda-Wj-mlp" secondAttribute="leading" constant="16" id="076-WE-59q"/>
+                                        <constraint firstAttribute="trailing" secondItem="7Lw-gF-HFq" secondAttribute="trailing" constant="16" id="AOD-3b-dsq"/>
+                                        <constraint firstAttribute="bottom" secondItem="S0I-wr-31a" secondAttribute="bottom" constant="5" id="F11-xr-Xh4"/>
+                                        <constraint firstItem="zHB-mf-sUw" firstAttribute="centerY" secondItem="uda-Wj-mlp" secondAttribute="centerY" constant="1.25" id="aGH-Og-RKd"/>
+                                        <constraint firstItem="zHB-mf-sUw" firstAttribute="top" secondItem="7Lw-gF-HFq" secondAttribute="bottom" id="aPt-eV-iHX"/>
+                                        <constraint firstItem="7Lw-gF-HFq" firstAttribute="top" secondItem="uda-Wj-mlp" secondAttribute="top" constant="10" id="iQe-Eg-MWD"/>
+                                        <constraint firstItem="S0I-wr-31a" firstAttribute="top" secondItem="zHB-mf-sUw" secondAttribute="bottom" constant="10" id="nBU-nW-GR7"/>
+                                        <constraint firstItem="S0I-wr-31a" firstAttribute="centerX" secondItem="uda-Wj-mlp" secondAttribute="centerX" id="sX7-5U-Ust"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>

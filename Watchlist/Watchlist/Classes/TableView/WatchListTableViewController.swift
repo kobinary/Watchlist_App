@@ -8,16 +8,26 @@
 
 import UIKit
 
+private let cellReuseIdentifier = "InformationTableViewCell"
+
 class WatchListTableViewController: UITableViewController {
+
+    // MARK: - Properties
+
+    
+    // MARK: - Setups
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        setupUIView()
+    }
+    
+    private func setupUIView() {
+        setupNavigationItems()
+    }
+    
+    private func setupNavigationItems() {
+        navigationItem.titleView = LogoHelper().setupLogo()
     }
 
     // MARK: - Table view data source
@@ -30,16 +40,14 @@ class WatchListTableViewController: UITableViewController {
         return 1
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath) as! InformationTableViewCell
 
         // Configure the cell...
 
         return cell
     }
  
-
     /*
     // MARK: - Navigation
 
@@ -51,3 +59,6 @@ class WatchListTableViewController: UITableViewController {
     */
 
 }
+
+
+
