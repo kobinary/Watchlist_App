@@ -12,23 +12,37 @@ import XCTest
 class WatchlistTests: XCTestCase {
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        super.setUp()
     }
 
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        super.tearDown()
     }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func testCreationalCellViewModel() {
+        
+        let information = Information.init(infoID: 101, name: "First Info", modified: "2018-01-22T23:00:00.0000000Z")
+        let cellViewModel = CellViewModel.init(tab: information)
+        
+        XCTAssertNotNil(cellViewModel)
     }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testCreationalCellViewModelValues() {
+        
+        let information = Information.init(infoID: 101, name: "First Info", modified: "2018-01-22T23:00:00.0000000Z")
+        let cellViewModel = CellViewModel.init(tab: information)
+        
+        XCTAssertEqual(cellViewModel.infoID, 101)
+        XCTAssertEqual(cellViewModel.name, "First Info")
+        XCTAssertEqual(cellViewModel.date!, "Mon, Jan 22, 2018 - 23:00")
     }
-
+    
+    func testCreationalSectionViewModel() {
+        
+        let information = Information.init(infoID: 101, name: "First Info", modified: "2018-01-22T23:00:00.0000000Z")
+        let cellViewModel = CellViewModel.init(tab: information)
+        let sectionViewModel = SectionViewModel.init(title: "First Section", listTabs: [cellViewModel])
+        
+        XCTAssertNotNil(sectionViewModel)
+    }
 }

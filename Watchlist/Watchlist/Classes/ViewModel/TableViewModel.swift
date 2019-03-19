@@ -31,9 +31,8 @@ class TableViewModel {
     
     func fetchListCategories() {
         guard let manager = manager else { return }
-        let searchURL = manager.tabsURLFromParameters()
         
-        manager.fetchTabs(searchURL) { [weak self] (results) in
+        manager.fetchTabs() { [weak self] (results) in
             guard let self = self else { return }
             
             switch results {

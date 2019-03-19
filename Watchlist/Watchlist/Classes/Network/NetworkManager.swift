@@ -8,6 +8,11 @@
 
 import UIKit
 
+
+protocol NetworkManagerProtocol {
+    func fetchTabs(completion: @escaping (Result<Array<Category>>) -> Void)
+}
+
 class NetworkManager {
 
     // MARK: - URL Data
@@ -32,10 +37,10 @@ class NetworkManager {
     
     // MARK: - Fetch Data
     
-    func fetchTabs(_ searchURL: URL, completion: @escaping (Result<Array<Category>>) -> Void) {
+    func fetchTabs(completion: @escaping (Result<Array<Category>>) -> Void) {
         
         let session = URLSession.shared
-        let request = URLRequest(url: searchURL)
+        let request = URLRequest(url: tabsURLFromParameters())
         
         let task = session.dataTask(with: request) {
             (data, response, error) in
