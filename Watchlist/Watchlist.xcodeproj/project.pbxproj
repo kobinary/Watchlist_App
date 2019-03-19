@@ -13,6 +13,9 @@
 		4C4EABEE2240F0560080E0F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C4EABED2240F0560080E0F4 /* Assets.xcassets */; };
 		4C4EABF12240F0560080E0F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C4EABEF2240F0560080E0F4 /* LaunchScreen.storyboard */; };
 		4C4EABFC2240F0560080E0F4 /* WatchlistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4EABFB2240F0560080E0F4 /* WatchlistTests.swift */; };
+		4C4EAC122240F2C60080E0F4 /* WatchListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4EAC112240F2C60080E0F4 /* WatchListTableViewController.swift */; };
+		4C4EAC142240F30A0080E0F4 /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4EAC132240F30A0080E0F4 /* Information.swift */; };
+		4C4EAC162240F3200080E0F4 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4EAC152240F3200080E0F4 /* Category.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		4C4EABF72240F0560080E0F4 /* WatchlistTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WatchlistTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C4EABFB2240F0560080E0F4 /* WatchlistTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistTests.swift; sourceTree = "<group>"; };
 		4C4EABFD2240F0560080E0F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C4EAC112240F2C60080E0F4 /* WatchListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListTableViewController.swift; sourceTree = "<group>"; };
+		4C4EAC132240F30A0080E0F4 /* Information.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
+		4C4EAC152240F3200080E0F4 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +163,8 @@
 		4C4EAC0F2240F13D0080E0F4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4C4EAC132240F30A0080E0F4 /* Information.swift */,
+				4C4EAC152240F3200080E0F4 /* Category.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -164,6 +172,7 @@
 		4C4EAC102240F1450080E0F4 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				4C4EAC112240F2C60080E0F4 /* WatchListTableViewController.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -269,7 +278,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C4EAC122240F2C60080E0F4 /* WatchListTableViewController.swift in Sources */,
+				4C4EAC162240F3200080E0F4 /* Category.swift in Sources */,
 				4C4EABE92240F0520080E0F4 /* ViewController.swift in Sources */,
+				4C4EAC142240F30A0080E0F4 /* Information.swift in Sources */,
 				4C4EABE72240F0520080E0F4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
