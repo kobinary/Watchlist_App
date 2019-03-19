@@ -7,17 +7,17 @@
 //
 
 import UIKit
-
+import Foundation
 
 protocol NetworkManagerProtocol {
-    func fetchTabs(completion: @escaping (Result<Array<Category>>) -> Void)
+    func fetchTabs(completion: @escaping (Result<Array<TabCategory>>) -> () )
 }
 
-class NetworkManager {
+class NetworkManager: NetworkManagerProtocol {
 
     // MARK: - URL Data
     
-    func tabsURLFromParameters() -> URL {
+    private func tabsURLFromParameters() -> URL {
         
         // Build base URL
         var components = URLComponents()
@@ -37,8 +37,7 @@ class NetworkManager {
     
     // MARK: - Fetch Data
     
-    func fetchTabs(completion: @escaping (Result<Array<Category>>) -> Void) {
-        
+    func fetchTabs(completion: @escaping (Result<Array<TabCategory>>) -> () ) {
         let session = URLSession.shared
         let request = URLRequest(url: tabsURLFromParameters())
         
@@ -87,5 +86,4 @@ class NetworkManager {
         }
         task.resume()
     }
-    
 }

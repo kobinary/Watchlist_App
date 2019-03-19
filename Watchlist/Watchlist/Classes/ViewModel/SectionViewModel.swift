@@ -17,7 +17,7 @@ class SectionViewModel {
     
     // MARK: - Init
     
-    init(category: Category) {
+    init(category: TabCategory) {
         self.title = category.title
         self.listTabs = parseTabsToViewModel(tabs: category.tabs)
     }

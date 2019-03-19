@@ -12,7 +12,8 @@ import Foundation
 // MARK: - Date Format
 
 let dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-let stringFormat = "EEE, MMM d, yyyy - h:mm a"
+let stringFormat = "EEE, MMM dd, yyyy - HH:mm"
+let timeZone = "UTC"
 
 extension String {
     
@@ -21,6 +22,7 @@ extension String {
     func toDate(withFormat format: String) -> Date? {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = format
+        dateFormatter.timeZone = NSTimeZone(name: timeZone) as TimeZone?
         let date = dateFormatter.date(from: self)
         
         return date
@@ -34,6 +36,7 @@ extension Date {
     func toString(withFormat format: String) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = format
+        dateFormatter.timeZone = NSTimeZone(name: timeZone) as TimeZone?
         let strMonth = dateFormatter.string(from: self)
         
         return strMonth

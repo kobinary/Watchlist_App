@@ -6,7 +6,7 @@
 //  Copyright © 2019 Maria Ortega. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 struct Information {
     let infoID: Int

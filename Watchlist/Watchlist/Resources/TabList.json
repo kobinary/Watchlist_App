@@ -1,0 +1,123 @@
+{
+    "WatchlistTabs": [
+        {
+            "Id": 100,
+            "Title": "Internal",
+            "Tabs": [
+                {
+                    "TabId": 10009,
+                    "TabName": "Group Financials",
+                    "LastModified": "2018-01-22T23:00:00.0000000Z"
+                },
+                {
+                    "TabId": 10000,
+                    "TabName": "Daily Sales",
+                    "LastModified": "2018-07-31T11:50:52.4470000Z"
+                },
+                {
+                    "TabId": 10001,
+                    "TabName": "Sales",
+                    "LastModified": "2018-07-31T15:44:31.7470000Z"
+                },
+                {
+                    "TabId": 10008,
+                    "TabName": "P&L Statement",
+                    "LastModified": "2017-09-21T22:00:00.0000000Z"
+                },
+                {
+                    "TabId": 10007,
+                    "TabName": "Sales YTD / YTG",
+                    "LastModified": "2017-09-21T22:00:00.0000000Z"
+                },
+                {
+                    "TabId": 10014,
+                    "TabName": "Region / Country P&L",
+                    "LastModified": "2018-06-20T22:00:00.0000000Z"
+                },
+                {
+                    "TabId": 10015,
+                    "TabName": "PVM",
+                    "LastModified": "2018-07-03T22:00:00.0000000Z"
+                },
+                {
+                    "TabId": 10004,
+                    "TabName": "Country Ranking Sales",
+                    "LastModified": "2018-07-31T15:44:31.7470000Z"
+                },
+                {
+                    "TabId": 10002,
+                    "TabName": "M&S Expenses",
+                    "LastModified": "2018-07-31T15:44:31.7470000Z"
+                },
+                {
+                    "TabId": 10003,
+                    "TabName": "Profit",
+                    "LastModified": "2018-07-31T15:44:31.7470000Z"
+                },
+                {
+                    "TabId": 10017,
+                    "TabName": "FCF",
+                    "LastModified": "2018-12-04T23:00:00.0000000Z"
+                },
+                {
+                    "TabId": 10018,
+                    "TabName": "MCF",
+                    "LastModified": "2018-12-04T23:00:00.0000000Z"
+                }
+            ]
+        },
+        {
+            "Id": 103,
+            "Title": "External",
+            "Tabs": [
+                {
+                    "TabId": 10005,
+                    "TabName": "Weekly Share Tracker",
+                    "LastModified": "2018-05-25T08:30:12.1970000Z"
+                },
+                {
+                    "TabId": 10006,
+                    "TabName": "Monthly Share Tracker",
+                    "LastModified": "2017-11-06T12:35:18.3200000Z"
+                }
+            ]
+        },
+        {
+            "Id": 105,
+            "Title": "DICE",
+            "Tabs": [
+                {
+                    "TabId": 10012,
+                    "TabName": "Daily FF Calls",
+                    "LastModified": "2018-02-22T23:00:00.0000000Z"
+                },
+                {
+                    "TabId": 10011,
+                    "TabName": "Call Plan Adherence (%)",
+                    "LastModified": "2018-02-01T23:00:00.0000000Z"
+                },
+                {
+                    "TabId": 10010,
+                    "TabName": "FLM Activity",
+                    "LastModified": "2018-01-31T23:00:00.0000000Z"
+                },
+                {
+                    "TabId": 10016,
+                    "TabName": "ATU",
+                    "LastModified": "2018-08-28T22:00:00.0000000Z"
+                }
+            ]
+        },
+        {
+            "Id": 106,
+            "Title": "Productivity",
+            "Tabs": [
+                {
+                    "TabId": 10013,
+                    "TabName": "Productivity KPI",
+                    "LastModified": "2018-05-07T22:00:00.0000000Z"
+                }
+            ]
+        }
+    ]
+}

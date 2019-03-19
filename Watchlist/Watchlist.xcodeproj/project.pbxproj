@@ -14,7 +14,7 @@
 		4C4EABFC2240F0560080E0F4 /* WatchlistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4EABFB2240F0560080E0F4 /* WatchlistTests.swift */; };
 		4C4EAC122240F2C60080E0F4 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4EAC112240F2C60080E0F4 /* TableViewController.swift */; };
 		4C4EAC142240F30A0080E0F4 /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4EAC132240F30A0080E0F4 /* Information.swift */; };
-		4C4EAC162240F3200080E0F4 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4EAC152240F3200080E0F4 /* Category.swift */; };
+		4C4EAC162240F3200080E0F4 /* TabCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4EAC152240F3200080E0F4 /* TabCategory.swift */; };
 		4C4EAC192240F4280080E0F4 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4EAC182240F4280080E0F4 /* TableViewCell.swift */; };
 		4C4EAC1B2240F53C0080E0F4 /* LogoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4EAC1A2240F4F00080E0F4 /* LogoHelper.swift */; };
 		4C4EAC1D2240FF0B0080E0F4 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4EAC1C2240FF0B0080E0F4 /* NetworkManager.swift */; };
@@ -27,16 +27,10 @@
 		4C4EAC2B224103100080E0F4 /* String+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4EAC2A224103100080E0F4 /* String+Date.swift */; };
 		4C4EAC2F22410D370080E0F4 /* UIColor+color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4EAC2E22410D370080E0F4 /* UIColor+color.swift */; };
 		4C4EAC40224129960080E0F4 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4EAC3F224129960080E0F4 /* NetworkManagerTests.swift */; };
-		4C4EAC42224129EB0080E0F4 /* SectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4EAC26224102C20080E0F4 /* SectionViewModel.swift */; };
-		4C4EAC43224129ED0080E0F4 /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4EAC24224101900080E0F4 /* TableViewModel.swift */; };
-		4C4EAC44224129F00080E0F4 /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4EAC132240F30A0080E0F4 /* Information.swift */; };
-		4C4EAC45224129F20080E0F4 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4EAC152240F3200080E0F4 /* Category.swift */; };
-		4C4EAC46224129F40080E0F4 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4EAC1C2240FF0B0080E0F4 /* NetworkManager.swift */; };
-		4C4EAC4722412A320080E0F4 /* String+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4EAC2A224103100080E0F4 /* String+Date.swift */; };
-		4C4EAC4822413EFA0080E0F4 /* CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4EAC28224102DD0080E0F4 /* CellViewModel.swift */; };
-		4C4EAC4922413F320080E0F4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4EAC222240FF6B0080E0F4 /* Constants.swift */; };
-		4C4EAC4A22413F340080E0F4 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4EAC1E2240FF2F0080E0F4 /* Result.swift */; };
-		4C4EAC4B22413F370080E0F4 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4EAC202240FF440080E0F4 /* Parser.swift */; };
+		4C4EAC50224143DD0080E0F4 /* TabList.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C4EAC4F224143DD0080E0F4 /* TabList.json */; };
+		4C4EAC51224143DD0080E0F4 /* TabList.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C4EAC4F224143DD0080E0F4 /* TabList.json */; };
+		4C4EAC5F2241583A0080E0F4 /* String+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4EAC2A224103100080E0F4 /* String+Date.swift */; };
+		4C4EAC602241583C0080E0F4 /* UIColor+color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4EAC2E22410D370080E0F4 /* UIColor+color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +55,7 @@
 		4C4EABFD2240F0560080E0F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C4EAC112240F2C60080E0F4 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		4C4EAC132240F30A0080E0F4 /* Information.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
-		4C4EAC152240F3200080E0F4 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		4C4EAC152240F3200080E0F4 /* TabCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCategory.swift; sourceTree = "<group>"; };
 		4C4EAC182240F4280080E0F4 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		4C4EAC1A2240F4F00080E0F4 /* LogoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoHelper.swift; sourceTree = "<group>"; };
 		4C4EAC1C2240FF0B0080E0F4 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -74,6 +68,7 @@
 		4C4EAC2A224103100080E0F4 /* String+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Date.swift"; sourceTree = "<group>"; };
 		4C4EAC2E22410D370080E0F4 /* UIColor+color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+color.swift"; sourceTree = "<group>"; };
 		4C4EAC3F224129960080E0F4 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
+		4C4EAC4F224143DD0080E0F4 /* TabList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TabList.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +141,7 @@
 		4C4EAC072240F0970080E0F4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4C4EAC4F224143DD0080E0F4 /* TabList.json */,
 				4C4EABED2240F0560080E0F4 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -206,7 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				4C4EAC132240F30A0080E0F4 /* Information.swift */,
-				4C4EAC152240F3200080E0F4 /* Category.swift */,
+				4C4EAC152240F3200080E0F4 /* TabCategory.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -312,6 +308,7 @@
 				4C4EABF12240F0560080E0F4 /* LaunchScreen.storyboard in Resources */,
 				4C4EABEE2240F0560080E0F4 /* Assets.xcassets in Resources */,
 				4C4EABEC2240F0520080E0F4 /* Main.storyboard in Resources */,
+				4C4EAC50224143DD0080E0F4 /* TabList.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +316,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C4EAC51224143DD0080E0F4 /* TabList.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,7 +333,7 @@
 				4C4EAC25224101900080E0F4 /* TableViewModel.swift in Sources */,
 				4C4EAC122240F2C60080E0F4 /* TableViewController.swift in Sources */,
 				4C4EAC1D2240FF0B0080E0F4 /* NetworkManager.swift in Sources */,
-				4C4EAC162240F3200080E0F4 /* Category.swift in Sources */,
+				4C4EAC162240F3200080E0F4 /* TabCategory.swift in Sources */,
 				4C4EAC232240FF6B0080E0F4 /* Constants.swift in Sources */,
 				4C4EAC212240FF440080E0F4 /* Parser.swift in Sources */,
 				4C4EAC142240F30A0080E0F4 /* Information.swift in Sources */,
@@ -351,18 +349,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C4EAC44224129F00080E0F4 /* Information.swift in Sources */,
+				4C4EAC5F2241583A0080E0F4 /* String+Date.swift in Sources */,
 				4C4EAC40224129960080E0F4 /* NetworkManagerTests.swift in Sources */,
-				4C4EAC43224129ED0080E0F4 /* TableViewModel.swift in Sources */,
-				4C4EAC46224129F40080E0F4 /* NetworkManager.swift in Sources */,
-				4C4EAC4822413EFA0080E0F4 /* CellViewModel.swift in Sources */,
-				4C4EAC4922413F320080E0F4 /* Constants.swift in Sources */,
-				4C4EAC42224129EB0080E0F4 /* SectionViewModel.swift in Sources */,
 				4C4EABFC2240F0560080E0F4 /* WatchlistTests.swift in Sources */,
-				4C4EAC4B22413F370080E0F4 /* Parser.swift in Sources */,
-				4C4EAC4722412A320080E0F4 /* String+Date.swift in Sources */,
-				4C4EAC45224129F20080E0F4 /* Category.swift in Sources */,
-				4C4EAC4A22413F340080E0F4 /* Result.swift in Sources */,
+				4C4EAC602241583C0080E0F4 /* UIColor+color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

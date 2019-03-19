@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 protocol TableViewModelDelegate: class {
     func reloadTable()
@@ -16,22 +17,21 @@ class TableViewModel {
 
     // MARK: - Properties
     
-    private var manager: NetworkManager?
+    let manager: NetworkManagerProtocol
+    
     weak var delegate: TableViewModelDelegate?
-    var sections = [SectionViewModel]()
     private var fullContent : [SectionViewModel]!
+    var sections = [SectionViewModel]()
 
     // MARK: - Init
     
-    init() {
-        manager = NetworkManager()
+    init(manager: NetworkManagerProtocol = NetworkManager()) {
+        self.manager = manager
     }
     
     // MARK: - Fetcher
     
     func fetchListCategories() {
-        guard let manager = manager else { return }
-        
         manager.fetchTabs() { [weak self] (results) in
             guard let self = self else { return }
             
@@ -50,7 +50,7 @@ class TableViewModel {
     
     // MARK: - Parser
     
-    private func parseListCategoryIntoViewModel(array: Array<Category>) -> [SectionViewModel] {
+    private func parseListCategoryIntoViewModel(array: Array<TabCategory>) -> [SectionViewModel] {
         var sectionsVM : [SectionViewModel] = []
         
         for category in array {

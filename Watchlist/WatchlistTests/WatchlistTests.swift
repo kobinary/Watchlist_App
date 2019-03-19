@@ -11,18 +11,29 @@ import XCTest
 
 class WatchlistTests: XCTestCase {
 
-    var sut: TableViewModel!
-    var mockAPIService: MockApiService!
+    var sut : TableViewModel!
+    var mockNetwork: MockNetworkManager!
     
     override func setUp() {
         super.setUp()
-        mockAPIService = MockApiService()
+        mockNetwork = MockNetworkManager()
+        sut = TableViewModel(manager: mockNetwork)
     }
     
     override func tearDown() {
         super.tearDown()
-        sut = nil
-        mockAPIService = nil
+        mockNetwork = nil
+    }
+    
+    func testFetchData() {
+        // Given
+        mockNetwork.completeTabCategory = [TabCategory]()
+        
+        // When
+        sut.fetchListCategories()
+        
+        // Assert
+        XCTAssert(mockNetwork!.isFetchDataCalled)
     }
     
     func testCreationalCellViewModel() {
@@ -53,14 +64,19 @@ class WatchlistTests: XCTestCase {
     }
 }
 
-class MockApiService: NetworkManagerProtocol {
+class MockNetworkManager: NetworkManagerProtocol {
     
     var isFetchDataCalled = false
-    var completeClosure: ((Result<Array<Category>>) -> ())!
     
-    func fetchTabs(completion: @escaping (Result<Array<Category>>) -> Void) {
+    var completeTabCategory: [TabCategory] = [TabCategory]()
+    var completeClosure: ((Result<Array<TabCategory>>) -> ())!
+    
+    
+    func fetchTabs(completion: @escaping (Result<Array<TabCategory>>) -> ()) {
         isFetchDataCalled = true
-        completeClosure = completion
+        completion(Result.error(.emptyData))
     }
+
 }
+
 

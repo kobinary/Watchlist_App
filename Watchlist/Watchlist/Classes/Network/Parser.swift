@@ -12,8 +12,8 @@ class Parser {
 
     // MARK: - Parse API Data
     
-    static func parseListTabs(array: [[String: AnyObject]]) -> Array<Category> {
-        var arrayCategories = Array<Category>()
+    static func parseListTabs(array: [[String: AnyObject]]) -> Array<TabCategory> {
+        var arrayCategories = Array<TabCategory>()
         
         for listTabs in array {
             if let listID = listTabs[Constants.CategoryModelKeys.id] as? Int,
@@ -21,7 +21,7 @@ class Parser {
                 let tabs = listTabs[Constants.CategoryModelKeys.tabs] as? [[String: AnyObject]] {
                 
                 let tabsModel = parseTabs(tabs: tabs)
-                let category = Category.init(categoryID: listID, title: title, tabs: tabsModel)
+                let category = TabCategory.init(categoryID: listID, title: title, tabs: tabsModel)
                 arrayCategories.append(category)
             }
         }
