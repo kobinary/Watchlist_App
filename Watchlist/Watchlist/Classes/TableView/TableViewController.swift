@@ -15,7 +15,8 @@ class TableViewController: UITableViewController {
     // MARK: - Properties
 
     private let viewModel = TableViewModel()
-    
+    private weak var activityIndicatorView: UIActivityIndicatorView!
+
     // MARK: - Setups
 
     override func viewDidLoad() {
@@ -31,15 +32,23 @@ class TableViewController: UITableViewController {
 
     private func setupUIView() {
         setupNavigationItems()
+        setupSpinner()
     }
     
     private func setupNavigationItems() {
         navigationItem.titleView = LogoHelper().setupLogo()
     }
     
+    private func setupSpinner() {
+        let activityIndicatorView = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.gray)
+        tableView.backgroundView = activityIndicatorView
+        self.activityIndicatorView = activityIndicatorView
+    }
+    
     // MARK: - Fetch Data
     
     private func fetchData() {
+        activityIndicatorView.startAnimating()
         viewModel.fetchListCategories()
     }
 
@@ -86,10 +95,10 @@ extension TableViewController: TableViewModelDelegate {
     
     func reloadTable() {
         DispatchQueue.main.sync {
+            self.activityIndicatorView.stopAnimating()
             self.tableView.reloadData()
         }
     }
-    
 }
 
 
