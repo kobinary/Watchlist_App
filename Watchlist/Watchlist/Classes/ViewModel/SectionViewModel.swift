@@ -18,8 +18,8 @@ class SectionViewModel {
     // MARK: - Init
     
     init(category: TabCategory) {
-        self.title = category.title
-        self.listTabs = parseTabsToViewModel(tabs: category.tabs)
+        self.title = category.Title
+        self.listTabs = parseTabsToViewModel(tabs: category.Tabs)
     }
     
     init(title: String, listTabs: [CellViewModel]) {

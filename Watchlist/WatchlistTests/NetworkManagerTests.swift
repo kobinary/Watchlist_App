@@ -39,7 +39,7 @@ class NetworkManagerTests: XCTestCase {
             case .results(let data):
                 XCTAssertEqual(data.count, 4)
                 for category in data {
-                    XCTAssertNotNil(category.categoryID)
+                    XCTAssertNotNil(category.Id)
                 }
             }
         }

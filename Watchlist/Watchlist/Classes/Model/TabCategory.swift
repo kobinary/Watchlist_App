@@ -9,7 +9,7 @@
 import Foundation
 
 struct TabCategory {
-    let categoryID: Int
-    let title: String
-    let tabs: Array<Information>
+    let Id: Int
+    let Title: String
+    let Tabs: Array<Information>
 }

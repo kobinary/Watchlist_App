@@ -7,6 +7,8 @@
 //
 
 import XCTest
+import Foundation
+
 @testable import Watchlist
 
 class WatchlistTests: XCTestCase {
@@ -34,6 +36,33 @@ class WatchlistTests: XCTestCase {
         
         // Assert
         XCTAssert(mockNetwork!.isFetchDataCalled)
+    }
+    
+    func testCreateCellViewModel() {
+        //Given a sut with fetched data
+        let tabs = StubGenerator().stubData()
+        mockNetwork.completeTabCategory = tabs
+        
+        // When
+        sut.fetchListCategories()
+        mockNetwork.fetchSuccess()
+ 
+        // Number of sections view model is equal to the number of categories
+        XCTAssertEqual(sut.numberOfSections, tabs.count)
+    }
+    
+    func testGetCellViewModel() {
+        //Given a sut with fetched photos
+        goToFetchDataFinished()
+        
+        let indexPath = IndexPath(row: 1, section: 0)
+        let testTab = mockNetwork.completeTabCategory[indexPath.row]
+        
+        // When
+        let vm = sut.getSectionViewModel(at: indexPath)
+        
+        //Assert
+        XCTAssertEqual(vm.title, testTab.Title)
     }
     
     func testCreationalCellViewModel() {
@@ -84,16 +113,24 @@ class WatchlistTests: XCTestCase {
     }
 }
 
+extension WatchlistTests {
+    
+    private func goToFetchDataFinished() {
+        mockNetwork.completeTabCategory = StubGenerator().stubData()
+        sut.fetchListCategories()
+        mockNetwork.fetchSuccess()
+    }
+}
+
 class MockNetworkManager: NetworkManagerProtocol {
     
     var isFetchDataCalled = false
-    
     var completeTabCategory: [TabCategory] = [TabCategory]()
     var completeClosure: ((Result<Array<TabCategory>>) -> ())!
     
-    
     func fetchTabs(completion: @escaping (Result<Array<TabCategory>>) -> ()) {
         isFetchDataCalled = true
+        completeClosure = completion
         completion(Result.error(.emptyData))
     }
     
@@ -104,7 +141,26 @@ class MockNetworkManager: NetworkManagerProtocol {
     func fetchFail() {
         completeClosure(Result.error(.emptyData))
     }
-
 }
+
+class StubGenerator {
+    
+    func stubData() -> Array<TabCategory> {
+        let json: [String:AnyObject]!
+        var listTabs = Array<TabCategory>()
+
+        if let path = Bundle.main.path(forResource: "TabList", ofType: "json") {
+            do {
+                let fileUrl = URL(fileURLWithPath: path)
+                let data = try Data(contentsOf: fileUrl, options: .mappedIfSafe)
+                json = try? JSONSerialization.jsonObject(with: data) as! [String : AnyObject]
+                let watchlistTabs = json[Constants.TabsAPIValues.watchlistTabs] as? [[String: AnyObject]]
+                listTabs = Parser.parseListTabs(array: watchlistTabs!)
+            } catch { }
+        }
+        return listTabs
+    }
+}
+
 
 

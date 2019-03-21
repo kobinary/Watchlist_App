@@ -16,7 +16,7 @@ class TableViewController: UITableViewController {
 
     private let viewModel = TableViewModel()
     private weak var activityIndicatorView: UIActivityIndicatorView!
-
+    
     // MARK: - Setups
 
     override func viewDidLoad() {

@@ -21,11 +21,11 @@ class Parser {
                 let tabs = listTabs[Constants.CategoryModelKeys.tabs] as? [[String: AnyObject]] {
                 
                 let tabsModel = parseTabs(tabs: tabs)
-                let category = TabCategory.init(categoryID: listID, title: title, tabs: tabsModel)
+                let category = TabCategory.init(Id: listID, Title: title, Tabs: tabsModel)
                 arrayCategories.append(category)
             }
         }
-        return arrayCategories.sorted(by: { $0.categoryID < $1.categoryID })
+        return arrayCategories.sorted(by: { $0.Id < $1.Id })
     }
     
     private static func parseTabs(tabs: [[String: AnyObject]]) -> Array<Information> {

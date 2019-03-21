@@ -23,6 +23,10 @@ class TableViewModel {
     private var fullContent : [SectionViewModel]!
     var sections = [SectionViewModel]()
 
+    var numberOfSections: Int {
+        return sections.count
+    }
+    
     // MARK: - Init
     
     init(manager: NetworkManagerProtocol = NetworkManager()) {
@@ -93,5 +97,19 @@ class TableViewModel {
         }
         return filteredSections
     }
-
+    
+    // MARK: - Sections and Cell methods
+    
+    func getSectionViewModel(at indexPath: IndexPath) -> SectionViewModel {
+        return sections[indexPath.row]
+    }
+    
+    func countNumberOfCells() -> Int {
+        var counter = 0
+        for section in sections {
+            counter += section.listTabs.count
+        }
+        counter += sections.count
+        return counter
+    }
 }
